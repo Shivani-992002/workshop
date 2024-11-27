@@ -1,0 +1,73 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dece99; /* Light blue background */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: #d28787; /* White background for the form */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text */
+}
+
+h2 {
+    color: #333; /* Dark text color */
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold; /* Bold labels */
+    color: #555; /* Darker gray for labels */
+}
+
+input {
+    width: 92%;
+    padding: 14px;
+    margin: 5px 0 15px;
+    border: 2px solid #7eaf7e; /* Green border */
+    border-radius: 4px;
+    transition: border-color 0.3s; /* Smooth transition */
+}
+
+input:focus {
+    border-color: #93d193; /* Darker green on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #000000; /* Green background */
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background: #0a0b0a; /* Darker green on hover */
+}
+
+p {
+    margin-top: 15px;
+    color: #555; /* Darker gray for paragraph text */
+}
+
+a {
+    color: #5d805d; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
