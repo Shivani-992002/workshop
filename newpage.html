@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer or Seller</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleForms() {
+            const role = document.querySelector('input[name="role"]:checked').value;
+            document.getElementById('buyer-form').style.display = role === 'buyer' ? 'block' : 'none';
+            document.getElementById('seller-form').style.display = role === 'seller' ? 'block' : 'none';
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Choose Your Role</h2>
+        <div class="form-group">
+            <label>
+                <input type="radio" name="role" value="buyer" onclick="toggleForms()" required> Buyer
+            </label>
+            <label>
+                <input type="radio" name="role" value="seller" onclick="toggleForms()"> Seller
+            </label>
+        </div>
+
+        <div id="buyer-form" style="display:none;">
+            <h3>Buyer Form</h3>
+            <form>
+                <div class="form-group">
+                    <label for="buyer-quality">Quality Needed</label>
+                    <input type="text" class="form-control" id="buyer-quality" name="buyer-quality" required>
+                </div>
+                <div class="form-group">
+                    <label for="buyer-quantity">Quantity</label>
+                    <input type="number" class="form-control" id="buyer-quantity" name="buyer-quantity" required>
+                </div>
+                <div class="form-group">
+                    <label for="buyer-location">Location</label>
+                    <input type="text" class="form-control" id="buyer-location" name="buyer-location" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Buyer Request</button>
+            </form>
+        </div>
+
+        <div id="seller-form" style="display:none;">
+            <h3>Seller Form</h3>
+            <form>
+                <div class="form-group">
+                    <label for="waste-category">Category of Waste</label>
+                    <input type="text" class="form-control" id="waste-category" name="waste-category" required>
+                </div>
+                <div class="form-group">
+                    <label for="seller-quantity">Quantity</label>
+                    <input type="number" class="form-control" id="seller-quantity" name="seller-quantity" required>
+                </div>
+                <div class="form-group">
+                    <label for="seller-quality">Quality</label>
+                    <input type="text" class="form-control" id="seller-quality" name="seller-quality" required>
+                </div>
+                <div class="form-group">
+                    <label for="seller-location">Location</label>
+                    <input type="text" class="form-control" id="seller-location" name="seller-location" required>
+                </div>
+                <div class="form-group">
+                    <label for="seller-price">Price</label>
+                    <input type="number" class="form-control" id="seller-price" name="seller-price" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Seller Offer</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
